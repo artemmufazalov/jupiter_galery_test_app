@@ -1,0 +1,1 @@
+# Тестовое задание для [ООО Юпитер](https://spb.hh.ru/vacancy/66635959?from=negotiations_item&hhtmFrom=negotiations_item)
