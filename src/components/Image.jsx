@@ -13,7 +13,7 @@ function Image({
 	return (
 		<div
 			className={`images-wrapper__image ${
-				isSelected ? 'image__selected' : ''
+				isSelected ? 'image--selected' : ''
 			}`}>
 			<div>
 				<img

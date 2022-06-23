@@ -1,5 +1,6 @@
 {
 	"name": "jupiter_galery",
+	"homepage": "https://artemmufazalov.github.io/jupiter_galery_test_app/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -18,7 +19,9 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"pretty": "prettier --config .prettierrc --ignore-path .prettierignore --write **/*.*"
+		"pretty": "prettier --config .prettierrc --ignore-path .prettierignore --write **/*.*",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -39,6 +42,7 @@
 		]
 	},
 	"devDependencies": {
+		"gh-pages": "^4.0.0",
 		"prettier": "^2.7.1"
 	}
 }

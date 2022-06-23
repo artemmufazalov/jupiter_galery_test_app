@@ -5,7 +5,7 @@ import expandFilter from '../assets/expandFilter.svg';
 const Category = ({ name, id, isSeleted, onSelect }) => (
 	<span
 		className={`filter__category${
-			isSeleted ? ' filter__category_selected' : ''
+			isSeleted ? ' filter__category--selected' : ''
 		}`}
 		onClick={() => onSelect(id)}>
 		{name}
@@ -35,13 +35,13 @@ function Filter({
 
 	if (!isDesktop) {
 		return (
-			<div className="filter_mobile" ref={popupRef}>
+			<div className="filter--mobile" ref={popupRef}>
 				<div
 					className="filter__block"
 					onClick={() => {
 						setIsPopupActive(!isPopupActive);
 					}}>
-					<div className="filter__category_mobile">
+					<div className="filter__category--mobile">
 						{categories[selectedCategoryIndex]}
 					</div>
 					<img src={expandFilter} alt="Раскрыть поиск" />

@@ -129,13 +129,13 @@ main {
 	cursor: pointer;
 }
 
-.filter__category_selected {
+.filter__category--selected {
 	color: #16cd53;
 }
 
 /* Filter for mobile*/
 @media (max-width: 1040px) {
-	.filter_mobile {
+	.filter--mobile {
 		display: flex;
 		flex-direction: column;
 
@@ -156,7 +156,7 @@ main {
 		border-radius: 5px;
 		background-color: #fff;
 	}
-	.filter__category_mobile {
+	.filter__category--mobile {
 		display: flex;
 		color: #391400;
 		opacity: 64%;
@@ -174,7 +174,7 @@ main {
 		width: 10px;
 		margin-right: 16px;
 	}
-	.filter__category_selected {
+	.filter__category--selected {
 		color: #16cd53;
 	}
 
@@ -214,13 +214,14 @@ main {
 	padding: 0;
 	margin: 0;
 }
-.image__selected {
+.image--selected {
 	border: 7px solid #4fe24a;
 }
 .images-wrapper__image img {
 	width: 320px;
 	height: 320px;
 	filter: saturate(75%) brightness(50%);
+	cursor: pointer;
 }
 
 .images-wrapper__image__content {

@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Библиотека для хука проверки размера экрана
 import { useMediaQuery } from 'react-responsive';
 
 import './App.css';
@@ -28,22 +30,17 @@ function App() {
 
 	const popupRef = React.useRef();
 
-	// Подгружает новые картинки при изменении категории или страницы, а также фильтрует их
-	React.useEffect(() => {
-		let arr = getImages(selectedCategoryIndex, categories, page);
-		arr = arr.filter((obj) => !blackList.includes(obj.id));
-		setImagesArr(arr);
-	}, [blackList, selectedCategoryIndex, page]);
-
 	const onLoadMore = () => {
 		setPage(page + 1);
 	};
 
 	const onSelectImage = (id) => {
-		if (selectedImageId === id) {
-			setSelectedImageId();
-		} else {
-			setSelectedImageId(id);
+		if (isDesktop) {
+			if (selectedImageId === id) {
+				setSelectedImageId();
+			} else {
+				setSelectedImageId(id);
+			}
 		}
 	};
 
@@ -57,6 +54,13 @@ function App() {
 			setIsPopupActive(false);
 		}
 	};
+
+	// Подгружает новые картинки при изменении категории или страницы, а также фильтрует их
+	React.useEffect(() => {
+		let arr = getImages(selectedCategoryIndex, categories, page);
+		arr = arr.filter((obj) => !blackList.includes(obj.id));
+		setImagesArr(arr);
+	}, [blackList, selectedCategoryIndex, page]);
 
 	// Для обработки кликов вне поля выбора категории (в мобильной версии)
 	// Если клик куда либо вне списка, он закрывается
@@ -74,6 +78,12 @@ function App() {
 
 	// Обработка нажатия Del
 	React.useEffect(() => {
+		// Для недесктопных вариантов нет возможности выбора картинки,
+		// поэтому не должно быть и выбранной картинки при переходе в них
+		if (!isDesktop) {
+			setSelectedImageId();
+		}
+
 		const onDelete = (e) => {
 			if (e.key !== 'Delete') {
 				return;

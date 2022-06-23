@@ -4,6 +4,9 @@
 *.txt
 *.ico
 
+# Test task
+/_task
+
 # pre-commit hooks
 .husky
 
