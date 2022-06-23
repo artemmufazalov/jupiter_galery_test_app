@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jupiter_galery_test_app/static/css/main.c6df6781.css",
-    "main.js": "/jupiter_galery_test_app/static/js/main.a84b9b8c.js",
+    "main.css": "/jupiter_galery_test_app/static/css/main.85ee2110.css",
+    "main.js": "/jupiter_galery_test_app/static/js/main.20270fa5.js",
     "index.html": "/jupiter_galery_test_app/index.html",
     "static/media/logo.svg": "/jupiter_galery_test_app/static/media/logo.b7788b4d1dedc0eb5bc114c944c98fb5.svg",
     "static/media/expandFilter.svg": "/jupiter_galery_test_app/static/media/expandFilter.b2ce2d0cf1e1d1c1238ce4e4f20036e9.svg",
-    "main.c6df6781.css.map": "/jupiter_galery_test_app/static/css/main.c6df6781.css.map",
-    "main.a84b9b8c.js.map": "/jupiter_galery_test_app/static/js/main.a84b9b8c.js.map"
+    "main.85ee2110.css.map": "/jupiter_galery_test_app/static/css/main.85ee2110.css.map",
+    "main.20270fa5.js.map": "/jupiter_galery_test_app/static/js/main.20270fa5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6df6781.css",
-    "static/js/main.a84b9b8c.js"
+    "static/css/main.85ee2110.css",
+    "static/js/main.20270fa5.js"
   ]
 }
